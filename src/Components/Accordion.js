@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FiChevronDown, FiChevronUp } from "react-icons/fi"
-import { StyledAccordion } from "./styled/Accordion.styled"
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { StyledAccordion } from "./styled/Accordion.styled";
 
 const Accordion = ({ question, answer, key }) => {
   const [isActive, setIsActive] = useState(false);

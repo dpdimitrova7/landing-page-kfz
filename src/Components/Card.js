@@ -1,14 +1,13 @@
-import React from 'react'
-import { StyledCard } from "./styled/Card.styled"
+import React from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { StyledCard } from "./styled/Card.styled";
 
 
 export default function Card({ item: { id, title } }) {
-
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   const boxVariant = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, scale: 0.8, y: -100 }
@@ -43,4 +42,4 @@ export default function Card({ item: { id, title } }) {
       </StyledCard>
     </motion.div>
   )
-}
+};

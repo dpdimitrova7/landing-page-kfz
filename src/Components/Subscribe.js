@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledSubscribe } from "./styled/Subscribe.styled";
-import { Flex } from "./styled/Flex.styled";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { StyledSubscribe } from "./styled/Subscribe.styled";
+import { Flex } from "./styled/Flex.styled";
 
 export default function Subscribe({ content, theme }) {
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   const boxVariant = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, scale: 0.8, y: -100 }
@@ -37,7 +37,6 @@ export default function Subscribe({ content, theme }) {
           <Flex gap={"10"} noMobileGap>
             <div className="input-container ic1">
               <input id="firstname" className="input" type="text" placeholder=" " />
-
               <label htmlFor="firstname" className="placeholder">First name</label>
             </div>
             <div className="input-container ic2">
@@ -54,4 +53,4 @@ export default function Subscribe({ content, theme }) {
       </Flex>
     </motion.div>
   )
-}
+};

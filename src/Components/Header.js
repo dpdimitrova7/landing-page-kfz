@@ -1,16 +1,14 @@
 import React, { useRef, useEffect } from 'react';
+import { FiChevronDown } from "react-icons/fi";
+import { IconContext } from "react-icons";
 import { StyledHeader, Nav, Logo, StyledDescription, BackgroundMask } from "./styled/Header.styled";
 import { Container } from './styled/Container.styled';
 import { Button } from './styled/Button.styled';
-import { FiChevronDown } from "react-icons/fi";
-import { IconContext } from "react-icons";
 import BgVideo from ".././Images/kf.mp4";
 
 export default function Header({ content, onClick }) {
   const { button1, button2, description, logo } = content.header;
-  const vidRef = useRef();
 
-  useEffect(() => { vidRef.current.play(); }, []);
   return (
     <StyledHeader>
       <BackgroundMask />
@@ -21,7 +19,7 @@ export default function Header({ content, onClick }) {
           <FiChevronDown onClick={onClick} />
         </div>
       </IconContext.Provider>
-      <video ref={vidRef} src={BgVideo} loop={true} muted={true} autoPlay={true} playsInline={true} className="video-bg" />
+      <video src={BgVideo} loop={true} muted={true} autoPlay={true} playsInline={true} className="video-bg" />
       <Container className="header-container">
         <Nav>
           <Logo src={logo} />
@@ -36,4 +34,4 @@ export default function Header({ content, onClick }) {
       </Container>
     </StyledHeader >
   )
-}
+};

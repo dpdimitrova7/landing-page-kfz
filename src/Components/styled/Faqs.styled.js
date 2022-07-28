@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const StyledFaqs = styled.div`
-  margin-top: ${({ theme }) => theme.containerSpacing};
+export const StyledFaqs = styled.div(
+  ({ theme }) => `
+  margin-top: ${theme.containerSpacing};
   background-color: #eee;
-  padding: ${({ theme }) => theme.containerSpacing} 0;
-  color: ${({ theme }) => theme.colors.textColor};
+  padding: ${theme.containerSpacing} 0;
+  color: ${theme.colors.textColor};
   h1 {
     text-align: center;
     margin: 0 0 2rem 0;
-    font-size: ${({ theme }) => theme.fonts.size.large};
+    font-size: ${theme.fonts.size.large};
   }
   .accordion {
     max-width: 600px;
     margin: auto;
   }
-
-`;
+`);

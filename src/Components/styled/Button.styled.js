@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Button = styled.button`
   align-items: center;
   appearance: none;
-  background-color: ${props => props.transparentBg ? `transparent` : `#fff`};
+  background-color: ${({ transparentBg }) => transparentBg ? `transparent` : `#fff`};
   border-radius: 24px;
   border: 3px solid #fff;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   box-sizing: border-box;
-  color: ${props => props.transparentBg ? `#fff` : `#3c4043`};
+  color: ${({ transparentBg }) => transparentBg ? `#fff` : `#3c4043`};
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;

@@ -47,6 +47,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 margin: auto;
+
 p {
   padding-bottom: 2rem;
   z-index: 1;

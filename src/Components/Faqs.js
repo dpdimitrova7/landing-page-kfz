@@ -1,16 +1,14 @@
 import React from 'react';
-import "./styled/faqs-styles.css";
 import Accordion from './Accordion';
-import { StyledFaqs } from "./styled/Faqs.styled";
-import { Container } from "./styled/Container.styled";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import { StyledFaqs } from "./styled/Faqs.styled";
+import { Container } from "./styled/Container.styled";
 
 export default function Faqs({ content }) {
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   const boxVariant = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, scale: 0.8, y: -100 }
@@ -45,6 +43,5 @@ export default function Faqs({ content }) {
         </Container>
       </motion.div>
     </StyledFaqs >
-
   );
 };

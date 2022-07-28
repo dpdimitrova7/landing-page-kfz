@@ -16,8 +16,7 @@ export const StyledCard = styled.div`
   padding: ${({ smallPadding }) => smallPadding ? `2.75em 1em` : `2.75em 2.5em`};
   box-shadow: ${({ theme }) => theme.shadow};
   transition: transform .45s ease, background .45s ease;
-  max-height: ${({ heightOption }) => heightOption && `500px`};
-
+  max-height: ${({ heightOption }) => heightOption && `550px`};
 
   a {
     color: #753BBD;
@@ -43,6 +42,7 @@ export const StyledCard = styled.div`
       font-size: 3.5em;
     }
   }
+  
   h4 {
     color: #2E3C40;
     text-transform: uppercase;
@@ -130,14 +130,14 @@ export const StyledCard = styled.div`
       }
     }
   }
-  }
+}
 
-  @keyframes point {
-    0% {
-    transform: translateX(0);
-    }
-    100% {
-      transform: translateX(.25em);
-    }
+@keyframes point {
+  0% {
+  transform: translateX(0);
   }
+  100% {
+    transform: translateX(.25em);
+  }
+}
 `

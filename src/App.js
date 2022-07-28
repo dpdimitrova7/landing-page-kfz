@@ -7,41 +7,36 @@ import Subscribe from './Components/Subscribe';
 import Reviews from './Components/Reviews';
 import Faqs from './Components/Faqs';
 import Footer from './Components/Footer';
+import theme from './theme';
+import content from "./content";
+import "./styles.css";
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { Container } from './Components/styled/Container.styled';
 import { Flex } from './Components/styled/Flex.styled';
 import { SectionSeparator } from './Components/styled/SectionSeparator.styled';
-import { Background } from "./Components/styled/Background.styled"
-import theme from './theme';
-import content from "./content"
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
-import "./styles.css";
+import { Background } from "./Components/styled/Background.styled";
 
 function App() {
   const { cards, information_cards, testimonials } = content;
-
   const getItems = () =>
     Array(20)
       .fill(0)
       .map((_, ind) => ({ id: `element-${ind}` }));
-
   const [items, setItems] = React.useState(getItems);
   const [selected, setSelected] = React.useState([]);
   const [position, setPosition] = React.useState(0);
-
   const isItemSelected = (id) => !!selected.find((el) => el === id);
 
-
   function LeftArrow() {
-    const { isFirstItemVisible, scrollPrev } =
-      React.useContext(VisibilityContext);
+    const { isFirstItemVisible, scrollPrev } = React.useContext(VisibilityContext);
 
     return (
       <FiChevronLeft size={25} disabled={isFirstItemVisible} cursor={"pointer"} color={"#753BBD"} onClick={() => scrollPrev()}>
         Left
       </FiChevronLeft>
     );
-  }
+  };
 
   function RightArrow() {
     const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext);
@@ -51,12 +46,10 @@ function App() {
         Right
       </FiChevronRight>
     );
-  }
+  };
 
   const myRef = useRef(null)
-
   const executeScroll = () => myRef.current.scrollIntoView();
-
 
   return (
     <ThemeProvider theme={theme}>
@@ -100,6 +93,6 @@ function App() {
       </Background>
     </ThemeProvider >
   );
-}
+};
 
 export default App;

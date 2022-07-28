@@ -6,13 +6,16 @@ export const StyledDescription = styled.div(
     font-size: ${theme.fonts.size.bigger};
     color: #fff;
     padding-top: 30px;
+
     p {
       max-width: 500px;
     }
+
     img {
       width: 100%;
       border-radius: 20px;
     }
+    
     @media (min-width: ${theme.breakpoints.small}) {
       width: ${theme.maxWidth}px;
       padding-top: 45px;

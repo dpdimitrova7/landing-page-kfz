@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-export const StyledSubscribe = styled.form`
-  margin-top: ${({ theme }) => theme.containerSpacing};
+export const StyledSubscribe = styled.form(
+  ({ theme }) => `
+  margin-top: ${theme.containerSpacing};
   border-radius: 20px;
   box-sizing: border-box;
-  box-shadow: ${({ theme }) => theme.shadow};
+  box-shadow: ${theme.shadow};
   transition: transform .45s ease, background .45s ease;
   padding: 20px;
   
-  @media (min-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (min-width: ${theme.breakpoints.small}) {
     width: 70%;
     padding: 0 5em 5em 5em;
   }
@@ -103,7 +104,7 @@ export const StyledSubscribe = styled.form`
 }
 
 .submit {
-  background-color: ${({ theme }) => theme.colors.highlight};
+  background-color: ${theme.colors.highlight};
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -120,4 +121,4 @@ export const StyledSubscribe = styled.form`
 .submit:active {
   background-color: #A754C4;
 }
-`
+`);

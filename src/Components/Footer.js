@@ -1,6 +1,4 @@
 import React from 'react';
-import { Container } from "./styled/Container.styled";
-import { Flex } from "./styled/Flex.styled";
 import { StyledFooter } from "./styled/Footer.styled";
 import { Logo } from "./styled/Header.styled";
 
@@ -30,4 +28,4 @@ export default function Footer({ content }) {
       <p className="copyright">&copy; 2021 Huddle. All rights reserved</p>
     </StyledFooter>
   )
-}
+};
