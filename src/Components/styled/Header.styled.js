@@ -1,18 +1,24 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-height: 85vh;
+height: 100vh;
 overflow: hidden;
 display: flex;
 flex-direction: column;
 position: relative;
 align-items: center;
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+}
 `
 
 export const BackgroundMask = styled.div`
 background: rgb(158,24,20);
 background: linear-gradient(0deg, rgba(158,24,20,1) 0%, rgba(101,101,101,1) 100%);
-height: 85vh;
+height: 100vh;
 width: 100%;
 opacity: 0.6;
 position: absolute;`
@@ -34,8 +40,7 @@ margin-top: 20px;
 `
 
 export const StyledDescription = styled.div`
-max-width: 85vh;
-padding-top: 5rem;
+max-width: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;

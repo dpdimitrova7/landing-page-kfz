@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { StyledHeader, Nav, Logo, StyledDescription, BackgroundMask } from "./styled/Header.styled";
 import { Container } from './styled/Container.styled';
 import { Button } from './styled/Button.styled';
@@ -8,7 +8,9 @@ import BgVideo from ".././Images/kf.mp4";
 
 export default function Header({ content, onClick }) {
   const { button1, button2, description, logo } = content.header;
+  const vidRef = useRef();
 
+  useEffect(() => { vidRef.current.play(); }, []);
   return (
     <StyledHeader>
       <BackgroundMask />
@@ -19,8 +21,8 @@ export default function Header({ content, onClick }) {
           <FiChevronDown onClick={onClick} />
         </div>
       </IconContext.Provider>
-      <video src={BgVideo} autoPlay muted loop className="video-bg" />
-      <Container>
+      <video ref={vidRef} src={BgVideo} loop={true} muted={true} autoPlay={true} playsInline={true} className="video-bg" />
+      <Container className="header-container">
         <Nav>
           <Logo src={logo} />
           <Button>{button1}</Button>
