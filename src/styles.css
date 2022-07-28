@@ -1,0 +1,35 @@
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow-x: hidden;
+}
+
+
+.react-horizontal-scrolling-menu--item {
+  max-width: none;
+  min-width: 100%;
+}
+
+@media only screen and (min-width: 730px) {
+  .react-horizontal-scrolling-menu--item {
+    min-width: 50%;
+  }
+}
+
+.information-cards {
+  padding-bottom: 60px !important;
+  padding-top: 15px;
+}
+
+.react-horizontal-scrolling-menu--inner-wrapper {
+  align-items: center;
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+  background-color: black;
+  transform: scale(1.5);
+}
